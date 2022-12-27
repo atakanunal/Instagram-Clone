@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
+}
+
+/*Utility Classes*/
+a{
+    color: black;
+}
+.menu-text{
+    font-size: 0.8em;
+}
+.story{
+    width: 10%;
+    height: 10%;
+    border-radius: 100%;
+    margin-left: 50%;
+}
+.profile{
+    
+}
+/* base html codes */
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background-color: #FAFAFA;
+}
+main{
+    min-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+/*menu style start*/
+.header{
+    min-width: 10vw;
+}
+.menu-items{
+    font-size: 2rem;
+    height: 100vh;
+    background-color: #FFFFFF;
+    max-width:20vw;
+    width: 20vw;
+    z-index: 99;  
+    border-right:1px solid lightgray;
+    position: fixed;
+}
+.header .navbar{
+    display: flex;
+    flex-direction: column;
+}
+.header .navbar a{
+    padding: 1em;
+}
+.header .navbar a:hover i,.header .navbar a:hover .profile img{
+    transform: scale(1.2);
+}
+.header a:hover:not(.logo){
+    cursor: pointer;
+    background-color: #f7f7f7;
+    border-radius: 50px;
+}
+.header .navbar a .menu-text{
+    margin-left: 0.5vw;
+}
+.header .navbar .profile img{
+    width: 7%;
+    height: 7%;
+    border-radius: 100%;
+}
+.header .navbar a .profile-text{
+    position: absolute;
+    top: 52.1%;
+}
+.header .navbar a:last-child{
+    position: absolute;
+    top: 93%;
+    width: 100%;
+}
+.header .navbar a .more{
+    position: absolute;
+    top: 35%;
+}
+.header .logo img{
+    width: 8vw;
+    height: 8vh;
+    margin-left: 0.9em;
+    object-fit: cover;
+}
+/*menu style end*/
+/*story style start*/
+.profile-section{
+    display: grid;
+    grid-template-rows: 15vh calc(100vh - 15vh);
+    margin-left: 16%;
+}
+.profile-section .menu{
+    margin-top:-1em;
+    width: 85%;
+}
+.profile-section .menu .box{
+    margin: 3em 0;
+    background-color: #FFFFFF;
+    border:1px solid lightgray;
+    border-radius: 1em;
+    display: flex;
+    position: relative;
+}
+.profile-section .menu .box .story{
+    margin: 1.5em;
+}
+.profile-section .menu .box .next{
+    position: absolute;
+    top: 35%;
+    left: 93%;
+}
+.profile-section .menu .box .next i{
+    background-color: #f2f2ff;
+    padding: 1em;
+    border-radius: 100%;
+}
+.profile-section .menu .box .next i:hover{
+    cursor: pointer;
+}
+.profile-section .menu .box .story img{
+    width: 3.5vw;
+    height: 3.5vw;
+    border: 3px solid #fb5f5f;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.profile-section .menu .box .story .photo-text{
+    font-size: 1.2em;
+    margin-left: 1em;
+}
+/*story style end*/
+/*post style start*/
+.profile-section .post-wrapper{
+    margin-top: 0.5em;
+    width: 85%;
+}
+.profile-section .post-wrapper .post{
+    background-color: #FFFFFF;
+    border:1px solid lightgray;
+    border-radius: 1em;
+    margin: 1em 0;
+    min-height: 80vh;
+}
+.profile-section .post-wrapper .post .top{
+    display: flex;
+}
+.profile-section .post-wrapper .post .top img{
+    width: 2.5vw;
+    height: 2.5vw;
+    border: 3px solid #fb5f5f;
+    border-radius: 100%;
+    cursor: pointer;
+    margin:1em;
+}
+.profile-section .post-wrapper .post .top .name{
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 1.5em 0;
+}
+.profile-section .post-wrapper .post .top i{
+    font-size: 1vw;
+    display: inline-block;
+    width: 90%;
+    text-align: end;
+    margin: 1.2em 1em;
+}
+.profile-section .post-wrapper .post .post-img img{
+    width: 100%;
+    border-top: 1px solid lightgray;
+    background-size: cover;
+    height: 60vh;
+}
+.profile-section .post-wrapper .post .icons{
+    display: flex;
+}
+.profile-section .post-wrapper .post .icons i{
+    font-size: 2.2em;
+    padding: 0.2em;
+    margin: 0.3em;
+}
+.profile-section .post-wrapper .post .icons i:last-child{
+    display: inline-block;
+    width: 70%;
+    text-align: end;
+}
+.profile-section .post-wrapper .post .like{
+    display: flex;
+}
+.profile-section .post-wrapper .post .like img{
+    width: 1.2vw;
+    height: 1.2vw;
+    border-radius: 100%;
+    cursor: pointer;
+    margin:1em;
+}
+.profile-section .post-wrapper .post .like p{
+    margin: 0.8em 0;
+    font-size: 1.4em;
+}
+.profile-section .post-wrapper .post .like p strong{
+    cursor: pointer;
+    font-weight: 600;
+}
+.profile-section .post-wrapper .post .time{
+    color: gray;
+    margin: 0 1em 0.6em;
+    font-size: 1.1em;
+}
+.profile-section .post-wrapper .post .comment{
+    display: flex;
+    padding: 1em;
+    border-top: 1px solid #f1f1f1f1;
+}
+.profile-section .post-wrapper .post .comment i{
+    font-size: 2.2em;
+    cursor: pointer;
+}
+.profile-section .post-wrapper .post .comment input{
+    padding: 0 0.5em;
+}
+.profile-section .post-wrapper .post .comment p{
+    font-size: 1.4em;
+    color: lightblue;
+    width: 60%;
+    text-align: end;
+}
+/*story style end*/
+/*suggestion style start*/
+.suggestion-section{
+    max-width: 18vw;
+    margin-top: 2em;
+}
+.suggestion-section .suggestion{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.suggestion-section .suggestion .suggestion-profile{
+    display: flex;
+    margin: 3.5em 0.5em;
+}
+.suggestion-section .suggestion .suggestion-profile img{
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-top: -1em;
+}
+.suggestion-section .suggestion .suggestion-profile .suggestion-name{
+    margin: 0.1em 1em;
+}
+.suggestion-section .suggestion .suggestion-profile .switch{
+    position: absolute;
+    top: 10%;
+    left: 75%;
+    font-size: 1.3em;
+    color: #43B0F7;
+    font-weight: 600;
+    cursor: pointer;
+}
+.suggestion-section .suggestion .suggestion-profile .suggestion-name .top-name,.suggestion-section .suggestion .suggestion-profile .suggestion-name .bottom-name{
+    font-size: 1.3em;
+}
+.suggestion-section .suggestion .suggestion-profile .suggestion-name .top-name{
+    cursor: pointer;
+    font-weight: 600;
+}
+.suggestion-section .suggestion .suggestion-profile .suggestion-name .bottom-name{
+    color: gray;
+}
+.suggestion-section .suggestion .for-you{
+    margin-top: -1.5em;
+    display: flex;
+    justify-content: space-between;    
+}
+.suggestion-section .suggestion .for-you .p-for-you{
+    font-size: 1.4em;
+    color: gray;
+}
+.suggestion-section .suggestion .for-you .see-all{
+    margin-right: 3.8em;
+    font-weight: 500;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.suggestion-section .suggestion .recommended-wrapper{
+    display: flex;
+    margin: -0.5em 0;
+}
+.suggestion-section .suggestion .recommended-wrapper img{
+    width: 1.8vw;
+    height: 1.8vw;
+    border-radius: 100%;
+    margin: 1em -0.5em;
+}
+.suggestion-section .suggestion .recommended-wrapper .follow{
+    display: inline-block;
+    width: 40%;
+    text-align: end;
+    margin:1.8em 1.8em;
+    font-size: 1.2em;
+    color: #43B0F7;
+    padding-right: 2.2em;
+}
+.suggestion-section .suggestion .recommended-wrapper .recommended-box{
+    margin: 1em;
+}
+.suggestion-section .suggestion .recommended-wrapper .recommended-box .top-name{
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+.suggestion-section .suggestion .recommended-wrapper .recommended-box .rec-box-wrapper{
+    display: flex;
+}
+.suggestion-section .suggestion .recommended-wrapper .recommended-box .rec-box-wrapper i{
+    width: 10%;
+    height: 25%;
+    color: #FFFFFF;
+    border-radius: 100%;
+    background-color: blue;
+    margin: 0.5em;
+}
+.suggestion-section .suggestion .recommended-wrapper .recommended-box .sug-bottom-name{
+    font-size: 1.1em;
+    color: gray;
+    display: inline-block;
+    width: 110%;
+}
+/*suggestion style end*/
+/*footer start*/
+.suggestion-section .footer{
+    position: relative;
+    min-width: 600px;
+}
+.suggestion-section .footer .ul-list{
+    display: flex;
+    list-style-type: none;
+    margin-top: 1.5em;
+}
+.suggestion-section .footer .ul-list li{
+    padding-right: 0.5em;
+}
+.suggestion-section .footer .ul-list li a{
+    color: lightgray;
+    font-size: 1.2em;
+}
+.suggestion-section .footer .ul-list li a.line{
+    position: absolute;
+    top: 28%;
+    left: 0;
+}
+.suggestion-section .footer .ul-list li a:hover:not(.line){
+    text-decoration: underline;
+}
+.suggestion-section .footer p{
+    color: lightgray;
+    margin-top: 3em;
+    font-size: 1.3em;
+}
+/*footer end*/
+
